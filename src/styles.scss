@@ -1,0 +1,189 @@
+@import "core/variables";
+@import "core/mixins";
+@import "core/reset";
+@import "modal";
+
+/*MAIN*/
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    gap: 16px;
+    font-family: $font-Rubik;
+}
+
+.starterPlan{
+    @include plan();
+    border-color: $border-light;
+    &_image{
+       margin: auto;
+    }
+    &_price{
+        &-name{
+            @include nameAndPeriodFont();
+        }
+        &-cost{
+            font-weight: 700;
+            font-size: 24px;
+        }
+        &-period{
+            @include nameAndPeriodFont();
+            color: $font-darkGrey;
+        }
+    }
+    &_features{
+        @include features();
+        &-featureContainer{
+            @include featureContainer();
+        }
+    }
+    &_button {
+        @include button();
+        box-sizing: border-box;
+        border-color: $purple;
+        text-transform: capitalize;
+        }
+}
+
+.description{
+    height: 16px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.opacity{
+    opacity: 0.3;
+}
+
+.invert{
+    filter: invert(100%);
+}
+
+.proPlan{
+    @include plan();
+    color: $font-white;
+    background: $purple;
+    border-color: $black;
+    &_image{
+        margin: auto;
+    }
+    &_price{
+        &-name{
+            @include nameAndPeriodFont();
+        }
+        &-cost{
+            font-weight: 700;
+            font-size: 24px;
+        }
+        &-period{
+            @include nameAndPeriodFont();
+        }
+    }
+    &_features{
+        @include features();
+        &-featureContainer{
+            @include featureContainer();
+        }
+    }
+    &_button {
+        @include button(); 
+        border-color: $black;
+        background-color: $black;
+        color: $font-white;
+        }
+}
+
+.teamsPlan{
+    @include plan();
+    border-color: $border-light;
+    &_image{
+        margin: auto;
+        display: grid;
+        &-first{
+            grid-column: 2 / 4;
+            grid-row: 1;
+            z-index: 1;
+        }
+        &-second{
+            grid-column: 3 / 5;
+            grid-row: 1;
+            z-index: 2;
+        }
+        &-third{
+            grid-column: 4 / 6;
+            grid-row: 1;
+            z-index: 3;
+        }
+    }
+    &_price{
+        &-name{
+            @include nameAndPeriodFont();
+        }
+        &-cost{
+            font-weight: 700;
+            font-size: 24px;
+        }
+        &-period{
+            @include nameAndPeriodFont();
+            color: $font-darkGrey;
+        }
+    }
+    &_features{
+        @include features();
+        &-featureContainer{
+            @include featureContainer();
+        }
+    }
+    &_button {
+        @include button();
+        border-color: $black;
+        background-color: $purple;
+        color: $font-white;
+        text-transform: capitalize;
+        }
+}
+
+//Buttons animations
+.slide_inside1:hover {
+    box-shadow: inset 0 0 0 50px $purple;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: $font-white;
+  } 
+
+  .slide_inside2:hover {
+    box-shadow: inset 0 0 0 50px $white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: $font-black;
+  } 
+
+.slide_inside3:hover {
+    box-shadow: inset 0 0 0 50px $white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: $purple;
+  }
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media all and (min-width: 768px){
+    .mainContainer{
+        flex-direction: row;
+        padding: 100px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media all and (min-width: 1200px){
+    .mainContainern{
+        flex-direction: row;
+        padding: 100px;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "JSApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "script-dev": "sass -w src/styles.scss dist/styles.css",
+    "script-prod": "sass -s compressed src/styles.scss dist/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.0"
+  }
+}
