@@ -25,3 +25,4 @@ He utilizado VisualCode para llevar a cabo todo el proyecto en cuanto a maquetac
 ## Autora
 Si te gusta mi trabajo puedes contactar o conocerme un poco más mediante mi perfil de Linkedin: (https://www.linkedin.com/in/bertaplumasanjurjo/)
 
+[![CodeFactor](https://www.codefactor.io/repository/github/bertapsan/price-plan/badge)](https://www.codefactor.io/repository/github/bertapsan/price-plan)
