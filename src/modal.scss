@@ -21,6 +21,13 @@ visibility: hidden;
     .thankyou{
         opacity: 1;
         visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        position: absolute;
+        top:25%; left:15%;
     }
 }
 
@@ -29,6 +36,7 @@ visibility: hidden;
     border-radius: 8px;
     font-family: $font-Rubik;
     z-index: 999;
+    height: 380px;
     width: 340px;
     position: absolute;
     top: 50%;
